@@ -121,6 +121,9 @@
                 servers: initData,
                 cache: [],
             },
+            mounted() {
+                this.troggleDarkMode();
+            },
             methods: {
                 mergeUsage(state, host) {
                     if (!state) {
@@ -173,6 +176,12 @@
                 formatByteSize(bs) {
                     const x = this.readableBytes(bs)
                     return x != "NaN undefined" ? x : '0B'
+                },
+                troggleDarkMode() {
+                    const hour = new Date(Date.now()).getHours()
+                     {
+                        document.body.classList.add('dark');
+                    }
                 },
                 secondToDate(s) {
                     var d = Math.floor(s / 3600 / 24);
