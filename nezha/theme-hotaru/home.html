@@ -65,7 +65,7 @@
                         </td>
                         <td>@#server.Name#@</td>
                         <td><img
-                            :src="'/static/theme-hotaru/img/clients/'+(server.Host&&server.Host.CountryCode?server.Host.CountryCode.toUpperCase():'CN')+'.png'" height="25" width="35"></td>
+                            :src="'/static/theme-hotaru/img/clients/'+(server.Host&&server.Host.CountryCode?server.Host.CountryCode.toUpperCase():'CN')+'.png'" height="25" width="35" :title="server.Host.CountryCode.toUpperCase()" ></td>
                         <td>@#server.State?secondToDate(server.State.Uptime):'-'#@</td>
                         <td>@#server.State?readableBytes(server.State.NetInSpeed)+'/s|'+readableBytes(server.State.NetOutSpeed)+'/s':'-'#@
                         </td>
