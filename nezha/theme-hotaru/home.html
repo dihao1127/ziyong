@@ -178,7 +178,7 @@
                 },
                 troggleDarkMode() {
                     const hour = new Date(Date.now()).getHours()
-                    if (hour > 24) {
+                    if (hour > 0) {
                         document.body.classList.add('dark');
                     }
                 },
